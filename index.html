@@ -69,6 +69,20 @@ nav a {
     font-size: 14px;
 }
 
+    .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
 nav a:hover {
     color: #ffd400;
 }
@@ -384,6 +398,28 @@ footer {
         padding: 30px 20px;
     }
 
+    
+
+    .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #0b0b0f;
+    padding: 15px 0;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links a {
+    margin: 8px 0;
+}
+
+.menu-button {
+    display: block;
+}
+    
     .gallery {
     grid-template-columns: 1fr;
 }
@@ -947,5 +983,11 @@ Send Request
 
 </footer>
 
+    <script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+    
 </body>
 </html>
